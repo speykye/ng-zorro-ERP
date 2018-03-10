@@ -1,0 +1,15 @@
+<ul nz-menu [nzMode]="'horizontal'">
+  <li routerLink="./organization" nz-menu-item [nzSelected]="true">组织机构</li>
+  <li routerLink="./wareHouse" nz-menu-item>仓库</li>
+  <li nz-menu-item>货位</li>
+  <li nz-menu-item>库存信息</li>
+  <li nz-menu-item>部门</li>
+  <li nz-menu-item>POS结算方式</li>
+  <li nz-menu-item>其他单类别</li>
+  <li nz-menu-item>印章图片</li>
+  <li nz-menu-item>辅助资料</li>
+  <li nz-menu-item>本企业基本信息</li>
+</ul>
+<nz-content>
+  <router-outlet></router-outlet>
+</nz-content>

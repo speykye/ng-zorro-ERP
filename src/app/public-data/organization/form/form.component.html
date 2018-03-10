@@ -1,0 +1,67 @@
+<nz-layout>
+  <nz-header>
+    <button nz-button [nzType]="'dashed'">
+      <i class="anticon anticon-save"></i>保存
+    </button>
+    <button nz-button (click)="goBack()" [nzType]="'dashed'">
+      <i class="anticon anticon-rollback"></i>放弃
+    </button>
+  </nz-header>
+  <nz-content>
+    <nz-tabset>
+      <nz-tab>
+        <ng-template #nzTabHeading>基本信息</ng-template>
+        <span>
+          <form nz-form [formGroup]="baseInfo">
+            <div nz-row [nzGutter]="40">
+              <div nz-col [nzSpan]="6">
+                <div nz-form-item nz-row>
+                  <div nz-form-label nz-col [nzSpan]="6">
+                    <label>上级编码</label>
+                  </div>
+                  <div nz-form-control nz-col [nzSpan]="15">
+                    <nz-input [nzPlaceHolder]="'placeholder'" formControlName="code"></nz-input>
+                  </div>
+                </div>
+              </div>
+              <div nz-col [nzSpan]="6">
+                <div nz-form-item nz-row>
+                  <div nz-form-label nz-col [nzSpan]="6">
+                    <label>编号</label>
+                  </div>
+                  <div nz-form-control nz-col [nzSpan]="15">
+                    <nz-input [nzPlaceHolder]="'placeholder'" formControlName="num"></nz-input>
+                  </div>
+                </div>
+              </div>
+              <div nz-col [nzSpan]="6">
+                <div nz-form-item nz-row>
+                  <div nz-form-label nz-col [nzSpan]="6">
+                    <label>财务编码</label>
+                  </div>
+                  <div nz-form-control nz-col [nzSpan]="15">
+                    <nz-input [nzPlaceHolder]="'placeholder'" formControlName="financialCoding"></nz-input>
+                  </div>
+                </div>
+              </div>
+              <div nz-col [nzSpan]="6">
+                <div nz-form-item nz-row>
+                  <div nz-form-label nz-col [nzSpan]="6">
+                    <label>名称</label>
+                  </div>
+                  <div nz-form-control nz-col [nzSpan]="15">
+                    <nz-input [nzPlaceHolder]="'placeholder'" formControlName="name"></nz-input>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </span>
+      </nz-tab>
+      <nz-tab>
+        <ng-template #nzTabHeading>辅助信息</ng-template>
+        <span></span>
+      </nz-tab>
+    </nz-tabset>
+  </nz-content>
+</nz-layout>

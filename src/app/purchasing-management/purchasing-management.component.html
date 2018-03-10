@@ -1,0 +1,91 @@
+<ul class="topMenu" nz-menu [nzMode]="'horizontal'">
+  <li nz-menu-item>采购协议</li>
+  <li nz-submenu>
+    <span title>采购计划</span>
+    <ul>
+      <li routerLink="./purchaseSetting" nz-menu-item [nzSelected]="true">采购计划设置</li>
+      <li routerLink="./purchaseCenter" nz-menu-item>采购中心</li>
+      <li nz-menu-item>采购计划序时簿</li>
+      <li nz-menu-item>询价供应商设置</li>
+      <li nz-menu-item>供应商比价处理</li>
+      <li nz-menu-item>缺货登记处理</li>
+    </ul>
+  </li>
+  <li nz-submenu>
+    <span title>订单处理</span>
+    <ul>
+      <li nz-menu-item>采购订单</li>
+      <li nz-menu-item>采购订单明细关闭</li>
+      <li nz-menu-item>已审核采购订单调整</li>
+    </ul>
+  </li>
+  <li nz-submenu>
+    <span title>收货验收</span>
+    <ul>
+      <li nz-menu-item>采购验收</li>
+      <li nz-menu-item>采购收货单</li>
+      <li nz-menu-item>到货温度状况维护</li>
+      <li nz-menu-item>拒收单-序时簿</li>
+      <li nz-menu-item>运输方式维护</li>
+      <li nz-menu-item>运输设备维护</li>
+      <li nz-menu-item>验收待查采购反馈处理</li>
+      <li nz-menu-item>验收待查商品处理</li>
+      <li nz-menu-item>低温温控方式维护</li>
+      <li nz-menu-item>批次检验报告单</li>
+      <li nz-menu-item>监管码文件生成</li>
+      <li nz-menu-item>特殊药品双人验收复检</li>
+      <li nz-menu-item>系统内采纳到货记录</li>
+    </ul>
+  </li>
+  <li nz-submenu>
+    <span title>采购入库</span>
+    <ul>
+      <li nz-menu-item>采购入库单</li>
+      <li nz-menu-item>采购入库差价单</li>
+      <li nz-menu-item>委托配送入库单</li>
+      <li nz-menu-item>委托配送入库差价单</li>
+      <li nz-menu-item>委托配送入库退货</li>
+      <li nz-menu-item>入库批次差价单</li>
+      <li nz-menu-item>采购入库保管确认</li>
+    </ul>
+  </li>
+  <li nz-submenu>
+    <span title>采购退货</span>
+    <ul>
+      <li nz-menu-item>采购退货申请单</li>
+      <li nz-menu-item>采购退货单</li>
+      <li nz-menu-item>采购退货保管确认</li>
+    </ul>
+  </li>
+  <li nz-submenu>
+    <span title>采购结算</span>
+    <ul>
+      <li nz-menu-item>采购发票</li>
+      <li nz-menu-item>付款单</li>
+      <li nz-menu-item>预付单</li>
+      <li nz-menu-item>预付单核销入库单记录</li>
+    </ul>
+  </li>
+  <li nz-submenu>
+    <span title>初始业务</span>
+    <ul>
+      <li nz-menu-item>采购对冲入库单（预结算）</li>
+      <li nz-menu-item>付款时供应商提醒设置</li>
+      <li nz-menu-item>铺底金额锁入库单</li>
+      <li nz-menu-item>商品指定供应商设置</li>
+      <li nz-menu-item>商品采购属性预览设置</li>
+    </ul>
+  </li>
+  <li nz-submenu>
+    <span title>序时簿</span>
+    <ul>
+      <li nz-menu-item>采购中心序时簿</li>
+      <li nz-menu-item>采购入库序时簿</li>
+      <li nz-menu-item>采购退货序时簿</li>
+      <li nz-menu-item>采购验收序时簿</li>
+    </ul>
+  </li>
+</ul>
+<nz-content>
+  <router-outlet></router-outlet>
+</nz-content>

@@ -1,0 +1,113 @@
+<nz-layout>
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null" [ngClass]="isCollapsed?'default':'active'">
+    <div class="logo">
+      <p>{{isCollapsed? '' : userName}}</p>
+      <p *ngIf="isCollapsed">ERP</p>
+      <ul *ngIf="!isCollapsed" class="xiugai" nz-menu [nzMode]="'horizontal'">
+        <li nz-submenu>
+          <span title>{{jurisdiction}}</span>
+          <ul>
+            <li nz-menu-item>修改头像</li>
+            <li routerLink="./userCenter" nz-menu-item>个人资料</li>
+            <li nz-menu-item>联系我们</li>
+            <li nz-menu-item>安全退出</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="isCollapsed?'vertical':'inline'">
+      <li nz-submenu>
+        <span title>
+          <i class="anticon anticon-fork"></i>
+          <span class="nav-text">供应链</span>
+        </span>
+        <ul>
+          <li *ngFor="let data of supplyChains" routerLink="{{data.url}}" nz-menu-item>{{data.name}}</li>
+        </ul>
+      </li>
+      <li nz-submenu>
+        <span title>
+          <i class="anticon anticon-shop"></i>
+          <span class="nav-text">连锁门店</span>
+        </span>
+      </li>
+      <li nz-submenu>
+        <span title>
+          <i class="anticon anticon-exception"></i>
+          <span class="nav-text">数据分析</span>
+        </span>
+        <ul>
+          <li routerLink="./baiduEcharts" nz-menu-item>百度ECharts</li>
+          <li nz-menu-item>图表组合</li>
+        </ul>
+      </li>
+      <li nz-submenu>
+        <span title>
+          <i class="anticon anticon-area-chart"></i>
+          <span class="nav-text">集团数据</span>
+        </span>
+        <ul>
+          <li nz-menu-item>集团数据</li>
+        </ul>
+      </li>
+      <li nz-submenu>
+        <span title>
+          <i class="anticon anticon-user"></i>
+          <span class="nav-text">会员中心</span>
+        </span>
+      </li>
+      <li nz-submenu>
+        <span title>
+          <i class="anticon anticon-setting"></i>
+          <span class="nav-text">系统设置</span>
+        </span>
+        <ul>
+          <li *ngFor="let data of systemSettings;let i = index" routerLink="{{data.url}}" (click)="navChecked(data.name,data.url)" nz-menu-item>{{data.name}}</li>
+        </ul>
+      </li>
+      <li nz-submenu>
+        <span title>
+          <i class="anticon anticon-appstore"></i>
+          <span class="nav-text">电商平台</span>
+        </span>
+        <ul>
+          <li nz-menu-item>电商平台</li>
+        </ul>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header style="background: #fff; padding:0;height:40px;">
+      <button class="menuChange" nz-button [nzType]="'default'" [class.anticon-menu-fold]="!isCollapsed" [class.anticon-menu-unfold]="isCollapsed"
+        (click)="isCollapsed=!isCollapsed">
+        <i class="anticon" [ngClass]="isCollapsed?'anticon-menu-unfold':'anticon-menu-fold'"></i>
+      </button>
+      <ul nz-menu [nzMode]="'horizontal'">
+        <div class="navBox">
+          <div class="inner">
+              <li *ngFor="let data of navTabs" (click)="data.fn(data.url)" nz-menu-item>{{data.name}}</li>
+          </div>
+        </div>
+        <button class="signOut" [nzType]="'default'" (click)="showModal()" nz-button>
+          <i class="anticon anticon-logout" style="margin-right:5px;"></i>退出</button>
+        <form class="searchForm" nz-form [nzLayout]="'inline'" [formGroup]="searchForm" style="margin-top:-14px">
+          <div nz-form-item>
+            <div nz-form-control>
+              <nz-input [nzPlaceHolder]="'请输入您要查找的内容'" formControlName="search"></nz-input>
+            </div>
+          </div>
+        </form>
+      </ul>
+    </nz-header>
+    <nz-content>
+      <router-outlet style="background: #fff;height:529px;max-height:529px;">
+      </router-outlet>
+    </nz-content>
+    <nz-footer style="text-align:center">黑龙江宝康医药</nz-footer>
+  </nz-layout>
+</nz-layout>
+<nz-modal [nzVisible]="isVisible" [nzTitle]="'提示'" [nzContent]="modalContent" (nzOnCancel)="handleCancel($event)" (nzOnOk)="handleOk($event)">
+  <ng-template #modalContent>
+    <p>是否退出？</p>
+  </ng-template>
+</nz-modal>

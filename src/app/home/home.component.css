@@ -1,0 +1,129 @@
+:host ::ng-deep .logo {
+    background: #333;
+    border-radius: 6px;
+    margin: 16px;
+    text-align: center;
+    color: #fff;
+    line-height: 32px;
+  }
+
+  :host ::ng-deep .ant-layout-sider-collapsed .nav-text {
+    display: none;
+  }
+
+  :host ::ng-deep .ant-layout-sider-collapsed .ant-menu-submenu-title:after {
+    display: none;
+  }
+
+  :host ::ng-deep .ant-layout-sider-collapsed .anticon {
+    font-size: 16px;
+    margin-left: 8px;
+  }
+
+  :host ::ng-deep .trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 16px;
+    cursor: pointer;
+    transition: color .3s;
+  }
+
+  :host ::ng-deep .trigger:hover {
+    color: #108ee9;
+  }
+
+  .active {
+    height:100vh;
+    overflow: auto;
+  }
+
+  .default {
+      height: 100vh;
+  }
+
+  .searchForm ,.signOut{
+      float: right;
+  }
+
+  .searchForm {
+    margin-top: -5px !important;
+  }
+
+  .signOut {
+    margin-top: 5px;
+    margin-right: 16px;
+  }
+
+  .menuChange {
+    float: left;
+    margin-top: 5px;
+    margin-left:16px; 
+    margin-right: 1%;
+  }
+
+  .xiugai {
+    border-bottom: 1px solid #333;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: #333;
+    color: #fff;
+  }
+
+  .xiugai li {
+    width: 100%;
+  }
+
+  .xiugai li:hover {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+
+  .xiugai .ant-menu-submenu .ant-menu-item {
+    height: 32px;
+    line-height: 32px;
+  }
+  .xiugai .ant-menu-submenu .ant-menu-item:hover {
+    background-color: #333;
+    color: #fff;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .ant-layout-footer {
+    padding: 10px 50px;
+  }
+
+  nz-header .ant-menu {
+    height: 40px;
+  }
+
+  nz-header .ant-menu .ant-menu-item {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: none;
+    float: left;
+  }
+
+  nz-header .ant-menu .ant-menu-item:hover {
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    border-bottom: none;
+  }
+
+  nz-header .ant-menu-horizontal > .ant-menu-item-selected {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .navBox {
+    width: 71%;
+    height: 40px;
+    float: left;
+    overflow: hidden;
+    overflow-y: hidden;
+  }
+
+  .inner {
+    width: 100%;
+  }

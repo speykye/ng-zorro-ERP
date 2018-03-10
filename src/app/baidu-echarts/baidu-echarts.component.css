@@ -1,0 +1,14 @@
+.ant-layout {
+    padding: 16px;
+}
+
+nz-content {
+    background-color: #fff;
+    padding: 16px;
+}
+
+.demo-chart {
+    height: 500px;
+    width: 50%;
+}
+

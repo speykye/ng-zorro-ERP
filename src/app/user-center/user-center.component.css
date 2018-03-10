@@ -1,0 +1,41 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.smallBox {
+    float: left;
+    border: 1px solid #ccc;
+    width: 300px;
+    height: 300px;
+    cursor: move;
+    overflow: hidden;
+}
+
+.tool {
+    display: none;
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    position: absolute;
+}
+
+.smallBox img {
+    width: 300px;
+    height: 300px;
+}
+
+.bigBox{  
+    float: left;
+    width:400px;  
+    height:400px;  
+    overflow:hidden;  
+    border:1px solid #ccc;  
+}  
+
+.bigBox img{  
+    position:absolute;  
+    width:1200px;  
+}  

@@ -1,0 +1,7 @@
+<nz-layout>
+  <nz-header>
+    <button *ngFor="let data of btns" nz-button [nzType]="'dashed'" (click)="data.fn()" ><i class="anticon {{data.icon}}"></i>{{data.name}}</button>
+  </nz-header>
+  <nz-content>
+  </nz-content>
+</nz-layout>

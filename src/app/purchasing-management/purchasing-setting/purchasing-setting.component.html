@@ -1,0 +1,46 @@
+<nz-layout>
+  <nz-header>
+    <button *ngFor="let btn of btns" nz-button [nzType]="'dashed'" (click)="btn.fn()">
+      <i class="anticon {{btn.icon}}"></i>{{btn.name}}</button>
+  </nz-header>
+  <nz-content>
+    <nz-table #nzTable [nzDataSource]="data" [nzPageSize]="50" [nzScroll]="{x:7500,y:420}" [nzLoading]="loading" >
+      <ng-template #nzFixedHeader>
+        <thead nz-thead>
+          <tr>
+            <th style="text-align:center" *ngFor="let data of ths" [nzWidth]="'150px'" nz-th>
+              <span>{{data}}</span>
+            </th>
+          </tr>
+        </thead>
+      </ng-template>
+      <tbody nz-tbody>
+        <tr nz-tbody-tr *ngFor="let i of nzTable.data">
+          <td nz-td>{{i.name}}</td>
+          <td nz-td>{{i.age}}</td>
+          <td nz-td>{{i.address}}</td>
+          <!-- <td nz-td>
+                  <span>
+                    <a href="#" (click)="edit(i)">编辑</a>
+                    <span nz-table-divider></span>
+                    <a href="#" (click)="del(i)">删除</a>
+                    <span nz-table-divider></span>
+                    <nz-dropdown>
+                      <a class="ant-dropdown-link" nz-dropdown>
+                        更多
+                        <i class="anticon anticon-down"></i>
+                      </a>
+                      <ul nz-menu>
+                        <li nz-menu-item>
+                          <a>active</a>
+                        </li>
+                      </ul>
+                    </nz-dropdown>
+      
+                  </span>
+                </td> -->
+        </tr>
+      </tbody>
+    </nz-table>
+  </nz-content>
+</nz-layout>

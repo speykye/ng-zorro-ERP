@@ -1,0 +1,105 @@
+<ul class="topMenu" nz-menu [nzMode]="'horizontal'">
+  <li nz-submenu>
+    <span title>合同</span>
+    <ul>
+      <li nz-menu-item>合同资料-序时簿</li>
+    </ul>
+  </li>
+  <li nz-submenu>
+    <span title>订单处理</span>
+    <ul>
+      <li nz-menu-item [nzSelected]="true">预售订单-序时簿</li>
+      <li nz-menu-item>电商客户订货处理</li>
+      <li nz-menu-item>电商客户订货处理高审</li>
+    </ul>
+  </li>
+  <li nz-submenu>
+    <span title>批发配货</span>
+    <ul>
+      <li nz-menu-item>销售出库单（单品开单）</li>
+      <li nz-menu-item>销售订单出库开单</li>
+      <li nz-menu-item>销售出库差价</li>
+      <li nz-menu-item>客户差价单</li>
+      <li nz-menu-item>客户高开价折让差价处理</li>
+      <li nz-menu-item>销售出库单收款审核</li>
+      <li nz-menu-item>业务现金记账</li>
+      <li nz-menu-item>业务赊销记账</li>
+      <li nz-menu-item>客户资信申请</li>
+      <li nz-menu-item>销售开单品种特殊申请（特殊售价）</li>
+      <li nz-menu-item>销售开单品种特殊申请（贴点特殊售价）</li>
+    </ul>
+  </li>
+  <li nz-submenu>
+    <span title>退货红冲</span>
+    <ul>
+      <li nz-menu-item>销售退回申请</li>
+      <li nz-menu-item>销售退回单-序时簿</li>
+      <li nz-menu-item>销售单红冲-序时簿</li>
+      <li nz-menu-item>销售退回单申请采购意见</li>
+      <li nz-menu-item>销售退回申请销售意见</li>
+    </ul>
+  </li>
+  <li nz-submenu>
+    <span title>销售结算</span>
+    <ul>
+      <li nz-menu-item>销售发票</li>
+      <li nz-menu-item>销售回款单</li>
+      <li nz-menu-item>预收单</li>
+      <li nz-menu-item>客户业务员调账</li>
+      <li nz-menu-item>销售回款按流水号</li>
+    </ul>
+  </li>
+  <li nz-submenu>
+    <span title>初始业务</span>
+    <ul>
+      <li nz-menu-item>商品销售客户范围设置</li>
+      <li nz-menu-item>模拟开单</li>
+      <li nz-menu-item>商品批次销售范围设置</li>
+      <li nz-menu-item>销售开单品种提醒设定</li>
+      <li nz-menu-item>客户业务员开票价设置</li>
+      <li nz-menu-item>特殊药品客户每月最大销售设置</li>
+    </ul>
+  </li>
+  <li nz-submenu>
+    <span title>绩效考核</span>
+    <ul>
+      <li nz-menu-item>商品集合</li>
+      <li nz-menu-item>商品集合设置</li>
+      <li nz-menu-item>客户集合</li>
+      <li nz-menu-item>客户集合设置</li>
+      <li nz-menu-item>销售业务员集合</li>
+      <li nz-menu-item>销售业务员集合设置</li>
+    </ul>
+  </li>
+  <li nz-submenu>
+    <span title>序时簿</span>
+    <ul>
+      <li nz-menu-item>销售出库序时簿</li>
+      <li nz-menu-item>销售回退序时簿</li>
+    </ul>
+  </li>
+  <li nz-submenu>
+    <span title>销售其他</span>
+    <ul>
+      <li nz-menu-item>缺货登记</li>
+      <li nz-menu-item>缺货登记处理（销售）</li>
+      <li nz-menu-item>客户业务停止销售销退设置</li>
+      <li nz-menu-item>客户业务解除停止销售销退设置</li>
+      <li nz-menu-item>客户质量停止销售销退设置</li>
+      <li nz-menu-item>客户质量解除停止销售销退设置</li>
+    </ul>
+  </li>
+  <li nz-submenu>
+    <span title>销退收验</span>
+    <ul>
+      <li nz-menu-item>销售退回拒收单</li>
+      <li nz-menu-item>销售退回接收记录</li>
+      <li nz-menu-item>销售退回保管确认</li>
+      <li nz-menu-item>销售退回验收审核确认</li>
+      <li nz-menu-item>销售退回验收剩余关闭</li>
+    </ul>
+  </li>
+</ul>
+<nz-content>
+  <router-outlet></router-outlet>
+</nz-content>

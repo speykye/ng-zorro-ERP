@@ -1,0 +1,30 @@
+.ant-menu-horizontal {
+    height: 30px;
+    background-color: #404040;
+}
+
+.ant-menu-item,.ant-menu-submenu {
+    height: 29px;
+    line-height: 29px;
+    color: #fff;
+}
+
+.ant-menu-submenu .ant-menu-item {
+    color: #404040;
+}
+
+.ant-menu-submenu .ant-menu-item:hover {
+    background-color: #404040;
+    color: #fff;
+}
+
+.ant-menu-item-selected {
+    background-color: #333 !important;
+    color: #fff !important;
+    border-bottom: none !important;
+}
+
+.ant-layout-content {
+    height: 84vh;
+    background-color: #fff;
+}
